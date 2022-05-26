@@ -1,16 +1,18 @@
-package modelo;
+package br.com.letscode.model;
+
+import br.com.letscode.enums.TipoTelefone;
 
 public class Telefone {
 
-    private String tipo;
+    private TipoTelefone tipo;
     private String ddd;
     private String numero;
 
-    public String getTipo() {
+    public TipoTelefone getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(TipoTelefone tipo) {
         this.tipo = tipo;
     }
 

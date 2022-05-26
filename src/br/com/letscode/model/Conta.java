@@ -1,13 +1,26 @@
-package modelo;
+package br.com.letscode.model;
+
+import java.util.logging.Logger;
 
 public class Conta {
+
+    public static Logger logger = Logger.getLogger("Conta");
+
+    public static double saldoDoBanco = 0;
+
+    public static int id;
+
     private Titular titular;
-
     private int agencia;
-
     private double saldo;
-
     private int numero;
+
+    public Conta(Titular titular, int agencia, int numero) {
+        this.titular = titular;
+        this.agencia = agencia;
+        this.numero = numero;
+        id++;
+    }
 
     public Titular getTitular() {
         return titular;
@@ -21,31 +34,31 @@ public class Conta {
         this.agencia = agencia;
     }
 
-    public Conta(Titular titular, int agencia, int numero) {
-        this.titular = titular;
-        this.agencia = agencia;
-        this.numero = numero;
-    }
-
     public void depositar(double valor) {
         saldo += valor;
+        saldoDoBanco += valor;
     }
 
-    public void sacar(double valor) {
+    public boolean sacar(double valor) {
         if (temSaldo(valor)) {
             saldo -= valor;
+            saldoDoBanco -= valor;
+            return true;
         }
+        return false;
     }
 
     public double retornarSaldo() {
         return saldo;
     }
 
-    public void transferir(double valor, Conta contaDestino){
+    public boolean transferir(double valor, Conta contaDestino){
         if (temSaldo(valor)){
             sacar(valor);
             contaDestino.depositar(valor);
+            return true;
         }
+        return false;
     }
 
     private boolean temSaldo(double valor){

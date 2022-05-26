@@ -1,7 +1,7 @@
-package aplicacao;
+package br.com.letscode.application;
 
-import modelo.Conta;
-import modelo.Titular;
+import br.com.letscode.model.Conta;
+import br.com.letscode.model.Titular;
 
 public class CriaConta {
 
@@ -12,21 +12,34 @@ public class CriaConta {
         titularConta1.setCpf("19933300099");
         titularConta1.setProfissao("Desenvolvedor");
 
-        System.out.println(titularConta1.getCpf());
+        double saldoTotal = Conta.saldoDoBanco;
 
         Conta contaA = new Conta(titularConta1,3342,609733);
+        contaA.getAgencia();
         contaA.depositar(500);
         System.out.println(contaA);
-        contaA.sacar(100);
-        System.out.println(contaA);
+        boolean sacou = contaA.sacar(100);
+        System.out.println("Saque com sucesso: " + sacou);
+        System.out.println("Saldo do banco " + Conta.saldoDoBanco);
 
-        System.out.println("Titular: "+ contaA.retornaNomeTitular());
+        Titular titularConta2 = new Titular();
+        titularConta2.setNome("Maria");
+        titularConta2.setCpf("19933300095");
+        titularConta2.setProfissao("Desenvolvedora");
+        System.out.println(titularConta2);
 
-        System.out.println("Agencia: "+ contaA.getAgencia());
+        Conta contaB = new Conta(titularConta2,3342,609733);
+        contaB.depositar(500);
+        System.out.println(contaB);
+        boolean sacouB = contaB.sacar(10);
+        System.out.println("Saque com sucesso: " + sacouB);
+        System.out.println("Saldo do banco " + Conta.saldoDoBanco);
 
-        contaA.setAgencia(3510);
+        boolean transferiu = contaA.transferir(100, contaB);
 
-        System.out.println("Agencia: "+ contaA.getAgencia());
+        System.out.println("Saldo Conta A: " + contaA.retornarSaldo());
+        System.out.println("Saldo Conta B: " + contaB.retornarSaldo());
+
 
 //        Titular titularConta2 = new Titular();
 //        titularConta2.nome = "Maria Magdala";

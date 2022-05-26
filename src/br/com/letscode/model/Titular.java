@@ -1,4 +1,7 @@
-package modelo;
+package br.com.letscode.model;
+
+import br.com.letscode.enums.TipoTelefone;
+import br.com.letscode.model.Telefone;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,12 +49,11 @@ public class Titular {
         return profissao;
     }
 
-
     public List<Telefone> getListaTelefones() {
         return listaTelefones;
     }
 
-    public void salvaTelefone(String tipo, String ddd, String numero){
+    public void salvaTelefone(TipoTelefone tipo, String ddd, String numero){
 
         Telefone fone = new Telefone();
 
