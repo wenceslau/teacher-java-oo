@@ -1,8 +1,8 @@
-package br.com.letscode.application;
+package br.com.letscode.conta.application;
 
 import br.com.letscode.Utils;
-import br.com.letscode.model.Conta;
-import br.com.letscode.model.Titular;
+import br.com.letscode.conta.model.Conta;
+import br.com.letscode.conta.model.Titular;
 
 import java.util.logging.Logger;
 

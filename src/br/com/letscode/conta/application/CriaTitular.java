@@ -1,8 +1,8 @@
-package br.com.letscode.application;
+package br.com.letscode.conta.application;
 
-import br.com.letscode.enums.TipoTelefone;
-import br.com.letscode.model.Telefone;
-import br.com.letscode.model.Titular;
+import br.com.letscode.conta.enums.TipoTelefone;
+import br.com.letscode.conta.model.Telefone;
+import br.com.letscode.conta.model.Titular;
 
 public class CriaTitular {
 

@@ -1,4 +1,4 @@
-package br.com.letscode.model;
+package br.com.letscode.conta.model;
 
 import java.util.logging.Logger;
 

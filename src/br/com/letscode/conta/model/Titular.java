@@ -1,7 +1,6 @@
-package br.com.letscode.model;
+package br.com.letscode.conta.model;
 
-import br.com.letscode.enums.TipoTelefone;
-import br.com.letscode.model.Telefone;
+import br.com.letscode.conta.enums.TipoTelefone;
 
 import java.util.ArrayList;
 import java.util.List;

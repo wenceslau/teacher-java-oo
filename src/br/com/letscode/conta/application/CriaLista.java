@@ -1,4 +1,4 @@
-package br.com.letscode.application;
+package br.com.letscode.conta.application;
 
 import java.util.ArrayList;
 
