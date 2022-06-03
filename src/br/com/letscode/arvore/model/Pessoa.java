@@ -1,6 +1,9 @@
 package br.com.letscode.arvore.model;
 
+import java.util.Objects;
+
 public class Pessoa {
+
     private String nome;
     private int idade;
     private Pessoa pai;
@@ -61,4 +64,6 @@ public class Pessoa {
     public String toString() {
         return nome;
     }
+
+
 }
