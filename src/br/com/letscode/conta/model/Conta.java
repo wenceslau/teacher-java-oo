@@ -9,21 +9,14 @@ public class Conta {
     public static double saldoDoBanco = 0;
 
     public static int id;
-
-    private Titular titular;
     private int agencia;
     private double saldo;
     private int numero;
 
-    public Conta(Titular titular, int agencia, int numero) {
-        this.titular = titular;
+    public Conta(int agencia, int numero) {
         this.agencia = agencia;
         this.numero = numero;
         id++;
-    }
-
-    public Titular getTitular() {
-        return titular;
     }
 
     public int getAgencia(){
@@ -69,13 +62,8 @@ public class Conta {
         return false;
     }
 
-    public String retornaNomeTitular(){
-        return titular.getNome();
-    }
-
-    @Override
-    public String toString() {
-        return String.format("Tituar: %s Agencia: %d Saldo: %f Numero: %d", titular, agencia, saldo, numero);
+    public int getNumero() {
+        return numero;
     }
 }
 
